@@ -16,7 +16,7 @@ if (button1 && box1) {
   });
 } else if (button1 === null) {
   console.error('Button1 doesnt exist.');
-} else if (box1 === null) {
+} else {
   console.error('Box1 doesnt exist.');
 }
 
@@ -29,9 +29,9 @@ if (button2 && box2) {
   button2.addEventListener('click', () => {
     box2.textContent = box2.textContent === 'SUCCESS' ? 'FAIL' : 'SUCCESS';
   });
-} else if (button1 === null) {
+} else if (button2 === null) {
   console.error('Button2 doesnt exist.');
-} else if (box1 === null) {
+} else {
   console.error('Box2 doesnt exist.');
 }
 
@@ -44,9 +44,9 @@ if (button3 && box3) {
   button3.addEventListener('click', () => {
     box3.style.visibility = box3.style.visibility === 'hidden' ? 'visible' : 'hidden';
   });
-} else if (button1 === null) {
+} else if (button3 === null) {
   console.error('Button3 doesnt exist.');
-} else if (box1 === null) {
+} else {
   console.error('Box3 doesnt exist.');
 }
 
@@ -59,9 +59,9 @@ if (button4 && box4) {
   button4.addEventListener('click', () => {
     box4.style.visibility = box4.style.visibility === 'hidden' ? 'visible' : 'hidden';
   });
-} else if (button1 === null) {
+} else if (button4 === null) {
   console.error('Button4 doesnt exist.');
-} else if (box1 === null) {
+} else {
   console.error('Box4 doesnt exist.');
 }
 
@@ -87,9 +87,9 @@ if (button5 && box5) {
       }
     }, 3000);
   });
-} else if (button1 === null) {
+} else if (button5 === null) {
   console.error('Button5 doesnt exist.');
-} else if (box1 === null) {
+} else {
   console.error('Box5 doesnt exist.');
 }
 
@@ -117,9 +117,9 @@ if (button6 && box6) {
       button6.removeAttribute('disabled');
     }, 11 * 3000);
   });
-} else if (button1 === null) {
+} else if (button6 === null) {
   console.error('Button6 doesnt exist.');
-} else if (box1 === null) {
+} else {
   console.error('Box6 doesnt exist.');
 }
 
@@ -137,9 +137,9 @@ if (button7 && boxes) {
       boxes[index].style.backgroundColor = newColor;
     });
   });
-} else if (button1 === null) {
+} else if (button7 === null) {
   console.error('Button7 doesnt exist.');
-} else if (box1 === null) {
+} else {
   console.error('Boxes doesnt exist.');
 }
 
@@ -156,7 +156,7 @@ box1.addEventListener('mouseleave', () => {
   }
 });
 
-//  Box 5
+//  Box 5 Timer
 
 let boxCounter = 0;
 let intervalIdBox: number;
@@ -176,9 +176,11 @@ if (box5) {
     boxCounter = 0;
     box5.textContent = boxCounter.toString();
   });
+} else {
+  console.error('Box5 doesnt exist');
 }
 
-//  Input
+//  Input text underneath
 
 const inputBox = document.querySelector<HTMLInputElement>('.input-box');
 const outputText = document.querySelector<HTMLParagraphElement>('.output-text');
